@@ -3,7 +3,7 @@ using UnityEditor;
 using System;
 using System.IO;
 
-namespace BrightLibTools
+namespace BrightLib.FolderCreator.Editor
 {
 	public class FolderCreatorWindow : SmartWindow 
 	{
