@@ -1,0 +1,61 @@
+{
+    "name": "Default",
+    "entries": [
+        {
+            "name": "Animation",
+            "chosen": false
+        },
+        {
+            "name": "Art",
+            "chosen": false
+        },
+        {
+            "name": "Audio",
+            "chosen": false
+        },
+        {
+            "name": "Data",
+            "chosen": false
+        },
+        {
+            "name": "Editor",
+            "chosen": false
+        },
+        {
+            "name": "Materials",
+            "chosen": false
+        },
+        {
+            "name": "Physics Materials",
+            "chosen": false
+        },
+        {
+            "name": "Prefabs",
+            "chosen": false
+        },
+        {
+            "name": "Resources",
+            "chosen": false
+        },
+        {
+            "name": "Scenes",
+            "chosen": false
+        },
+        {
+            "name": "Scripts",
+            "chosen": false
+        },
+        {
+            "name": "Scripts-UnitTests",
+            "chosen": false
+        },
+        {
+            "name": "Shaders",
+            "chosen": false
+        },
+        {
+            "name": "Textures",
+            "chosen": false
+        }
+    ]
+}

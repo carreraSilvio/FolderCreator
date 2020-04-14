@@ -5,7 +5,7 @@ using System.IO;
 
 namespace BrightLib.FolderCreator.Editor
 {
-	public class FolderCreatorWindow : SmartWindow 
+	public class FolderCreatorWindow : BrightLibTools.SmartWindow 
 	{
 		#region MenuItem
 
