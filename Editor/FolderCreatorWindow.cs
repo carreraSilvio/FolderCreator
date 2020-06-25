@@ -1,55 +1,11 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using System;
 using System.IO;
 
 namespace BrightLib.FolderCreator.Editor
 {
-	public class FolderCreatorWindow : BrightLibTools.SmartWindow 
+	public partial class FolderCreatorWindow : EditorWindow
 	{
-		#region MenuItem
-
-		private static string WINDOW_TITLE 	= "Folder Creator";
-		private static float WINDOW_WIDTH 	= 200;
-		private static float WINDOW_HEIGHT 	= 210;
-
-		[MenuItem ("BrightTools/Folder Creator")]
-		public static void ShowWindow ()  
-		{
-			EditorWindow.GetWindowWithRect<FolderCreatorWindow>(new Rect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT), true, WINDOW_TITLE);
-		}
-
-		#endregion
-
-		#region JSON Template Data 
-		[Serializable]
-		public struct CreationTemplate
-		{
-			[Serializable]
-			public struct CreationTemplateEntry
-			{
-				public string name;
-				public bool chosen;
-			}
-
-			public string name;
-			public CreationTemplateEntry[] entries;
-
-			public void InjectEntries(string[] names, bool[] chosen)
-			{
-				if(names.Length != chosen.Length) throw new IndexOutOfRangeException();
-
-				var length = names.Length;
-				entries = new CreationTemplateEntry[length];
-
-				for (int i = 0; i < length; i++) 
-				{
-					entries[i].name 	= names[i];
-					entries[i].chosen 	= chosen[i];
-				}
-			}
-		}
-		#endregion
 
 		private string[] DEFAULT_TEMPLATE_NAMES = {"Animation", "Art", "Audio", "Data", "Editor", "Materials", "Physics Materials", "Prefabs", "Resources", "Scenes", "Scripts", "Scripts-UnitTests", "Shaders", "Textures"};
 
@@ -195,6 +151,16 @@ namespace BrightLib.FolderCreator.Editor
 				folderChosen[i] = false;
 				AssetDatabase.CreateFolder("Assets", folderNames[i]);
 			}
+		}
+
+		public void DrawLabelBold(string text)
+		{
+			GUILayout.Label(text, EditorStyles.boldLabel);
+		}
+
+		public bool DrawButton(string text, float width = 60, float height = 20)
+		{
+			return GUILayout.Button(text, GUILayout.Width(width), GUILayout.Height(height));
 		}
 
 	}
