@@ -1,0 +1,13 @@
+{
+  "name": "com.brightlib.foldercreator",
+  "version": "1.0.0",
+  "displayName": "Folder Creator",
+  "description": "Basic set-up inside your Assets folder to keep things tidy and consistent.",
+  "unity": "2018.2",
+  "unityRelease": "15f1",
+  "author": 
+  {
+    "name": "Silvio Carréra",
+    "url": "https://github.com/carreraSilvio/folderCreator"
+  }
+}
