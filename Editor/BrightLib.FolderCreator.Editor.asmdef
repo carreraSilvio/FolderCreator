@@ -1,5 +1,5 @@
 {
-    "name": "BrightLib.FolderCreator",
+    "name": "BrightLib.FolderCreator.Editor",
     "references": [],
     "includePlatforms": [
         "Editor"
